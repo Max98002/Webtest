@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Comic Sans MS';
+  src: url('../fonts/ComicSansMS/ComicSansMS.woff2') format('woff2'),
+      url('../fonts/ComicSansMS/ComicSansMS.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin comic {
+  font-family: 'Comic Sans MS';
+}
