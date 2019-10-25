@@ -1,0 +1,52 @@
+.help
+  padding: 41px 0 41px 0
+  background: url('../img/help/2.png') no-repeat left top / 51%
+  background-color: #1ea992
+  &__title
+    margin-bottom: 93px 
+    text-align: center
+    color: #ffffff
+  &-wrap
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    max-width: 50%
+    margin-left: auto
+  &-list
+    padding: 0
+    margin: 0
+    list-style: none
+    &__item
+      display: flex
+      align-items: flex-start
+      margin-bottom: 75px
+      &:nth-of-type(even)
+        margin-left: 80px
+      &:last-child
+        margin-bottom: 0
+    &__counter
+      margin-right: 33px
+      color: #ffffff
+      font-size: 60px
+      font-weight: bold
+      line-height: 50px
+    &__text
+      margin: 0
+      max-width: 448px
+      color: #ffffff
+      font-size: 16px
+      text-transform: uppercase
+      line-height: 26px
+@media screen and ( max-width: 1200px )
+  .help
+    background-size: 46%
+    &-list
+      &__item
+        margin-bottom: 50px
+      &__text
+        font-size: 14px
+        line-height: 20px
+@media screen and ( max-width: 760px )
+  .help
+    &-wrap
+      max-width: 62%

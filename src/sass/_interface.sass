@@ -24,25 +24,36 @@ body
   background-repeat: no-repeat
   background-position: top right
   background-size: 75%
+@media screen and ( max-width: 760px )
+  body
+    background-image: url('../img/bg/1.png')
+    background-repeat: no-repeat
+    background-position: top right
+    background-size: 102%
 input
   padding-left: 2px
   padding-bottom: 6px
   padding-right: 139px
-  color: #434949
   font-size: 16px
   border: none
   border-bottom: 2px solid #32cfb6
   background: transparent
-  &:nth-of-type(2)
-    font-weight: 700
+  text-overflow: ellipsis
+  color: #ffffff
 label
   color: #1db8a4
   text-transform: uppercase
   font-weight: 400
   margin-right: auto
 .container
-  max-width: 1207px
+  max-width: 1172px
   margin: 0 auto
+@media screen and ( max-width: 1200px )
+  .container
+    max-width: 1040px
+@media screen and ( max-width: 991px )
+  .container
+    max-width: 90%
 .section
   &-title
     font-size: 30px
