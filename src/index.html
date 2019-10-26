@@ -13,19 +13,19 @@
   <nav class="nav nav-menu">
     <div class="container">
       <ul class="nav-menu__list">
-        <li class="nav-menu__item wow fadeInRight" data-wow-delay="1s">
+        <li class="nav-menu__item wow fadeInRight" data-wow-delay=".1s">
           <a href="#" class="nav-menu__link">Home</a>
         </li>
-        <li class="nav-menu__item  wow fadeInRight" data-wow-delay="2s">
+        <li class="nav-menu__item  wow fadeInRight" data-wow-delay=".2s">
           <a href="#" class="nav-menu__link">our requirement</a>
         </li>
-        <li class="nav-menu__item  wow fadeInRight" data-wow-delay="3s">
+        <li class="nav-menu__item  wow fadeInRight" data-wow-delay=".3s">
           <a href="#" class="nav-menu__link">HELP</a>
         </li>
-        <li class="nav-menu__item  wow fadeInRight" data-wow-delay="4s">
+        <li class="nav-menu__item  wow fadeInRight" data-wow-delay=".4s">
           <a href="#" class="nav-menu__link">WE OFFER</a>
         </li>
-        <li class="nav-menu__item  wow fadeInRight" data-wow-delay="5s">
+        <li class="nav-menu__item  wow fadeInRight" data-wow-delay=".5s">
           <a href="#" class="nav-menu__link">contacts </a>
         </li>
       </ul>
@@ -36,17 +36,17 @@
   <header class="header request">
     <div class="container">
       <div class="request-box">
-        <div class="request-left  wow fadeInLeft" data-wow-delay="2s">
+        <div class="request-left  wow fadeInLeft" data-wow-delay=".2s">
           <h2 class="section-title request__title">send request</h2>
           <form action="#" class="request-form">
-            <input type="text" class="input request-form__input" placeholder="Input your name">
+            <input type="text" name="username" class="input request-form__input" placeholder="Input your name">
             <label for="email" class="request-form__label">Input email</label>
-            <input type="text" id="email" class="input request-form__input" placeholder="example_email@gmail.com">
+            <input type="text" id="email" name="email" class="input request-form__input" placeholder="example_email@gmail.com">
             <button class="button request-form__button">send</button>
           </form>
         </div>
         <!-- /.request-left -->
-        <div class="request-right wow zoomIn" data-wow-delay="2s">
+        <div class="request-right wow zoomIn" data-wow-delay=".2s">
           <img src="./img/request/image.png" alt="request-right">
         </div>
         <!-- /.request-right -->
@@ -293,9 +293,9 @@
           <div class="contacts-wrap__left">
             <h2 class="section-title contacts__title_m">send request</h2>
             <form action="#" class="contacts-form">
-              <input type="text" class="input contacts-form__input" placeholder="Input your name">
+              <input type="text" name="username" class="input contacts-form__input" placeholder="Input your name">
               <label for="email" class="contacts-form__label">Input email</label>
-              <input type="text" id="email" class="input contacts-form__input" placeholder="example_email@gmail.com">
+              <input type="text" name="email" id="email" class="input contacts-form__input" placeholder="example_email@gmail.com">
               <button class="button contacts-form__button">send</button>
             </form>
           </div>
@@ -363,6 +363,93 @@
   <script src="./js/wow.min.js"></script>
   <script>
     new WOW().init();
+  </script>
+  <script src="./js/jquery.validate.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.request-form').validate({
+        rules: {
+          username: {
+            required: true,
+            minlength: 2
+          },
+          email: {
+            required: true,
+            email: true
+          }
+        },
+        errorElement: "div",
+        errorClass: "invalid",
+        messages: {
+          username: {
+            required: "Укажите имя",
+            minlength: jQuery.validator.format("Осталось cимволов! {0}")
+          },
+          email: {
+            required: "Заполните поле Email",
+            email: "Введите корректный email"
+          }
+        },
+        submitHandler: function (form) {
+          $.ajax({
+            url: form.action,
+            type: form.method,
+            data: $(form).serialize(),
+            success: function (response) {
+              console.log("Hello Все гуд: " + response);
+              $('#brif-form')[0].reset();
+              thanksmodal.addClass('thanksmodal_active');
+            },
+            error: function (jqHXR, textStatus, errorThrown) {
+              console.log(jqHXR + " " + textStatus);
+            }
+          });
+        }
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $('.contacts-form').validate({
+        rules: {
+          username: {
+            required: true,
+            minlength: 2
+          },
+          email: {
+            required: true,
+            email: true
+          }
+        },
+        errorElement: "div",
+        errorClass: "invalid",
+        messages: {
+          username: {
+            required: "Укажите имя",
+            minlength: jQuery.validator.format("Осталось cимволов! {0}")
+          },
+          email: {
+            required: "Заполните поле Email",
+            email: "Введите корректный email"
+          }
+        },
+        submitHandler: function (form) {
+          $.ajax({
+            url: form.action,
+            type: form.method,
+            data: $(form).serialize(),
+            success: function (response) {
+              console.log("Hello Все гуд: " + response);
+              $('#brif-form')[0].reset();
+              thanksmodal.addClass('thanksmodal_active');
+            },
+            error: function (jqHXR, textStatus, errorThrown) {
+              console.log(jqHXR + " " + textStatus);
+            }
+          });
+        }
+      });
+    });
   </script>
 </body>
 

@@ -39,6 +39,8 @@
       line-height: 26px
 @media screen and ( max-width: 1200px )
   .help
+    &__title
+      margin-bottom: 60px
     background-size: 46%
     &-list
       &__item
@@ -48,5 +50,25 @@
         line-height: 20px
 @media screen and ( max-width: 760px )
   .help
+    background-size: 33%
     &-wrap
-      max-width: 62%
+      max-width: 100%
+    &-list
+      &__counter
+        margin-right: 14px
+      &__text
+        font-size: 11px
+        line-height: 15px
+@media screen and ( max-width: 760px )
+  .help
+    background-size: 43%
+    &-list
+      &__item
+        margin-bottom: 30px
+        &:nth-of-type(even)
+          margin-left: 0
+      &__counter
+        margin-right: 10px
+      &__text
+        font-size: 11px
+        line-height: 15px

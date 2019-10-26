@@ -15,6 +15,12 @@ button
   border-radius: 5px
   background-image: linear-gradient(49deg, #fb6a4e 0%, #ff606a 100%)
   cursor: pointer
+@media screen and ( max-width: 760px )
+  button
+    width: 195px
+    height: 45px
+    font-size: 20px
+    
 img
   max-width: 100%
 body
@@ -29,7 +35,7 @@ body
     background-image: url('../img/bg/1.png')
     background-repeat: no-repeat
     background-position: top right
-    background-size: 102%
+    background-size: 112%
 input
   padding-left: 2px
   padding-bottom: 6px
@@ -40,11 +46,18 @@ input
   background: transparent
   text-overflow: ellipsis
   color: #ffffff
+@media screen and ( max-width: 760px )
+  input
+    padding-right: 70px
+    font-size: 12px
 label
   color: #1db8a4
   text-transform: uppercase
   font-weight: 400
   margin-right: auto
+@media screen and ( max-width: 760px )
+  input
+    font-size: 12px
 .container
   max-width: 1172px
   margin: 0 auto
@@ -60,3 +73,7 @@ label
     font-weight: bold
     text-transform: uppercase
     color: #272f2f
+@media screen and ( max-width: 760px )
+  .section
+    &-title
+      font-size: 25px

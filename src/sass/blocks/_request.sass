@@ -1,5 +1,5 @@
 .request
-  padding-bottom: 314px
+  padding-bottom: 130px
   background: url(../img/bg/right.png) no-repeat bottom left
   &__title
     text-align: center
@@ -33,5 +33,12 @@
     &-box
       flex-direction: column-reverse
     &-right
-      width: 50%
+      width: 65%
+@media screen and ( max-width: 420px )
+  .request
+    &-right
+      width: 70%
+      margin-bottom: 25px
+    &__title
+      margin-bottom: 40px
   
