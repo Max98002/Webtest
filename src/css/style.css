@@ -1081,6 +1081,7 @@ label {
 }
 
 .footer {
+  position: relative;
   padding: 15px 0;
   background: #41414d;
 }
@@ -1091,6 +1092,24 @@ label {
   font-weight: bold;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+.uparrow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 10%;
+}
+
+.uparrow:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .uparrow {
+    left: 0;
+  }
 }
 
 /*!

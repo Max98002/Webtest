@@ -12,21 +12,21 @@
 <body>
   <nav class="nav nav-menu">
     <div class="container">
-      <ul class="nav-menu__list">
+      <ul class="nav-menu__list" id="menu">
         <li class="nav-menu__item wow fadeInRight" data-wow-delay=".1s">
           <a href="#" class="nav-menu__link">Home</a>
         </li>
         <li class="nav-menu__item  wow fadeInRight" data-wow-delay=".2s">
-          <a href="#" class="nav-menu__link">our requirement</a>
+          <a href="#our" class="nav-menu__link">our requirement</a>
         </li>
         <li class="nav-menu__item  wow fadeInRight" data-wow-delay=".3s">
-          <a href="#" class="nav-menu__link">HELP</a>
+          <a href="#hep" class="nav-menu__link">HELP</a>
         </li>
         <li class="nav-menu__item  wow fadeInRight" data-wow-delay=".4s">
-          <a href="#" class="nav-menu__link">WE OFFER</a>
+          <a href="#of" class="nav-menu__link">WE OFFER</a>
         </li>
         <li class="nav-menu__item  wow fadeInRight" data-wow-delay=".5s">
-          <a href="#" class="nav-menu__link">contacts </a>
+          <a href="#con" class="nav-menu__link">contacts </a>
         </li>
       </ul>
     </div>
@@ -41,7 +41,8 @@
           <form action="#" class="request-form">
             <input type="text" name="username" class="input request-form__input" placeholder="Input your name">
             <label for="email" class="request-form__label">Input email</label>
-            <input type="text" id="email" name="email" class="input request-form__input" placeholder="example_email@gmail.com">
+            <input type="text" id="email" name="email" class="input request-form__input"
+              placeholder="example_email@gmail.com">
             <button class="button request-form__button">send</button>
           </form>
         </div>
@@ -59,7 +60,7 @@
   <main>
     <section class="section requirement">
       <div class="container">
-        <h2 class="section-title requirement__title">OUR requirement</h2>
+        <h2 class="section-title requirement__title" id="our">OUR requirement</h2>
         <!-- /.section-title requirement__title -->
         <div class="requirement-wrap">
           <div class="requirement__card wow flipInX">
@@ -164,7 +165,7 @@
     <!-- /.section requirement -->
     <section class="section help">
       <div class="container">
-        <h2 class="section-title help__title">HELP</h2>
+        <h2 class="section-title help__title" id="hep">HELP</h2>
         <!-- /.section-title help__title -->
         <div class="help-wrap">
           <ul class="help-list wow slideInUp">
@@ -212,7 +213,7 @@
     <!-- /.section help -->
     <section class="section offer">
       <div class="container">
-        <h2 class="section-title offer__title">WE OFFER:</h2>
+        <h2 class="section-title offer__title" id="of">WE OFFER:</h2>
         <!-- /.section-title offer__title -->
         <div class="offer-wrap">
           <div class="offer-wrap__item wow flipInX">
@@ -287,7 +288,7 @@
     <!-- /.section offer -->
     <section class="section contacts">
       <div class="container">
-        <div class="section-title contacts__title">Contacts</div>
+        <div class="section-title contacts__title" id="con">Contacts</div>
         <!-- /.section-title contacts__title -->
         <div class="contacts-wrap">
           <div class="contacts-wrap__left">
@@ -295,7 +296,8 @@
             <form action="#" class="contacts-form">
               <input type="text" name="username" class="input contacts-form__input" placeholder="Input your name">
               <label for="email" class="contacts-form__label">Input email</label>
-              <input type="text" name="email" id="email" class="input contacts-form__input" placeholder="example_email@gmail.com">
+              <input type="text" name="email" id="email" class="input contacts-form__input"
+                placeholder="example_email@gmail.com">
               <button class="button contacts-form__button">send</button>
             </form>
           </div>
@@ -352,6 +354,9 @@
     <!-- /.section map -->
   </main>
   <footer class="footer">
+    <div class="uparrow" id="up">
+      <img src="./img/upload.png" alt="">
+    </div>
     <div class="container">
       <h3 class="footer__title">created by Bilanych Max</h3>
     </div>
@@ -360,6 +365,7 @@
   <!-- /.footer -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="./js/main.js"></script>
   <script src="./js/wow.min.js"></script>
   <script>
     new WOW().init();
@@ -451,6 +457,7 @@
       });
     });
   </script>
+
 </body>
 
 </html>
